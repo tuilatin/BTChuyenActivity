@@ -1,6 +1,7 @@
 package com.example.btchuyenactivity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -21,7 +22,9 @@ public class ProfileActivity extends Activity {
         imgBtnBack_144.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v_144){
-                finish();
+                Intent intentChuyen_144 = new Intent(ProfileActivity.this, MainActivity.class);
+                intentChuyen_144.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // clear stack
+                startActivity(intentChuyen_144);
             }
         });
     }
